@@ -7,7 +7,7 @@ plugins {
 
 group = "app.boboc"
 version = "0.0.1-SNAPSHOT"
-val libVersion = "1.2.0"
+val libVersion = "1.2.2"
 
 java {
     toolchain {

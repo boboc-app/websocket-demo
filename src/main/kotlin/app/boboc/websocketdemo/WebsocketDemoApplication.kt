@@ -22,6 +22,14 @@ class WebfluxCoroutineHandler : CoroutineWebSocketHandler(){
     override suspend fun coroutineHandle(session: WebSocketSession, message: WebSocketMessage) {
         session.sendMessage("ECHO ${message.payloadAsText}")
     }
+
+    override suspend fun onOpen(session: WebSocketSession) {
+        println("OPEN ${session.id}")
+    }
+
+    override suspend fun onClose(session: WebSocketSession) {
+        println("CLOSE ${session.id}")
+    }
 }
 
 @Configuration
